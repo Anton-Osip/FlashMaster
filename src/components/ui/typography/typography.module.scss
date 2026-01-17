@@ -1,0 +1,118 @@
+@mixin typography($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+.typography {
+  font-family: var(--font-family-primary);
+  letter-spacing: 0px;
+  color: var(--color-light-100);
+}
+
+.h1 {
+  @include typography(
+    var(--font-size-xxl),
+    var(--line-height-l),
+    var(--font-weight-bold)
+  );
+}
+
+.h2 {
+  @include typography(
+    var(--font-size-xl),
+    var(--line-height-l),
+    var(--font-weight-bold)
+  );
+}
+
+.h3 {
+  @include typography(
+    var(--font-size-l),
+    var(--line-height-m),
+    var(--font-weight-bold)
+  );
+}
+
+.h4 {
+  @include typography(
+    var(--font-size-m),
+    var(--line-height-m),
+    var(--font-weight-bold)
+  );
+}
+
+.body1 {
+  @include typography(
+    var(--font-size-m),
+    var(--line-height-m),
+    var(--font-weight-regular)
+  );
+}
+
+.body2 {
+  @include typography(
+    var(--font-size-m),
+    var(--line-height-m),
+    var(--font-weight-bold)
+  );
+}
+
+.subtitle1 {
+  @include typography(
+    var(--font-size-s),
+    var(--line-height-m),
+    var(--font-weight-regular)
+  );
+}
+
+.subtitle2 {
+  @include typography(
+    var(--font-size-s),
+    var(--line-height-m),
+    var(--font-weight-bold)
+  );
+}
+
+.caption {
+  @include typography(
+    var(--font-size-xs),
+    var(--line-height-s),
+    var(--font-weight-regular)
+  );
+}
+
+.overline {
+  @include typography(
+    var(--font-size-xs),
+    var(--line-height-s),
+    var(--font-weight-bold)
+  );
+}
+
+.link1 {
+  @include typography(
+    var(--font-size-s),
+    var(--line-height-m),
+    var(--font-weight-regular)
+  );
+
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  color: var(--color-info-500);
+}
+
+.link2 {
+  @include typography(
+    var(--font-size-xs),
+    var(--line-height-s),
+    var(--font-weight-regular)
+  );
+
+  color: var(--color-info-500);
+
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+}
