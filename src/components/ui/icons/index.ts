@@ -1,1 +1,5 @@
+export { default as HomeIcon } from './components/HomeIcon'
+export { default as HomeOutlineIcon } from './components/HomeOutlineIcon'
 export { default as LogOutIcon } from './components/LogOutIcon'
+export { default as PlusSquareIcon } from './components/PlusSquareIcon'
+export { default as PlusSquareOutlineIcon } from './components/PlusSquareOutlineIcon'
