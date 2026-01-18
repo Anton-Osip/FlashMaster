@@ -8,10 +8,33 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   variant?: 'primary' | 'secondary'
   fullWidth?: boolean
   className?: string
+  icon?: ReactNode
 } & ComponentPropsWithoutRef<T>
 
 export const Button = <T extends ElementType = 'button'>(props: ButtonProps<T>) => {
-  const { variant = 'primary', fullWidth, className, as: Component = 'button', ...rest } = props
+  const {
+    variant = 'primary',
+    fullWidth,
+    className,
+    as: Component = 'button',
+    icon,
+    children,
+    ...rest
+  } = props
 
-  return <Component className={clsx(s[variant], fullWidth && s.fullWidth, className)} {...rest} />
+  return (
+    <Component
+      className={clsx(
+        s.button,
+        s[variant],
+        icon && s.withIcon,
+        fullWidth && s.fullWidth,
+        className
+      )}
+      {...rest}
+    >
+      {icon && icon}
+      {children}
+    </Component>
+  )
 }
