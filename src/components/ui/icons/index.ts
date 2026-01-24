@@ -1,3 +1,4 @@
+export { default as CheckIcon } from './components/CheckIcon'
 export { default as HomeIcon } from './components/HomeIcon'
 export { default as HomeOutlineIcon } from './components/HomeOutlineIcon'
 export { default as LogOutIcon } from './components/LogOutIcon'
